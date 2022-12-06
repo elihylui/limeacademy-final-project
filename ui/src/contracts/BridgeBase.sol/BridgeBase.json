@@ -1,0 +1,177 @@
+{
+  "_format": "hh-sol-artifact-1",
+  "contractName": "BridgeBase",
+  "sourceName": "contracts/BridgeBase.sol",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_token",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "from",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "to",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "amount",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "date",
+          "type": "uint256"
+        }
+      ],
+      "name": "Burned",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "from",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "to",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "amount",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "date",
+          "type": "uint256"
+        }
+      ],
+      "name": "Minted",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "from",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "to",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "amount",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "date",
+          "type": "uint256"
+        }
+      ],
+      "name": "Transfer",
+      "type": "event"
+    },
+    {
+      "inputs": [],
+      "name": "admin",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "to",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "burn",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "to",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "mint",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "token",
+      "outputs": [
+        {
+          "internalType": "contract IToken",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "bytecode": "0x608060405234801561001057600080fd5b5060405161033838038061033883398101604081905261002f91610062565b60008054336001600160a01b031991821617909155600180549091166001600160a01b0392909216919091179055610092565b60006020828403121561007457600080fd5b81516001600160a01b038116811461008b57600080fd5b9392505050565b610297806100a16000396000f3fe608060405234801561001057600080fd5b506004361061004c5760003560e01c806340c10f19146100515780639dc29fac14610066578063f851a44014610079578063fc0c546a146100a8575b600080fd5b61006461005f366004610229565b6100bb565b005b610064610074366004610229565b610176565b60005461008c906001600160a01b031681565b6040516001600160a01b03909116815260200160405180910390f35b60015461008c906001600160a01b031681565b6001546040516340c10f1960e01b81526001600160a01b03848116600483015260248201849052909116906340c10f1990604401600060405180830381600087803b15801561010957600080fd5b505af115801561011d573d6000803e3d6000fd5b5050604080513381526001600160a01b03861660208201529081018490524260608201527f03f17d66ad3bf18e9412eb06582908831508cdb9b8da9cddb1431f645a5b8632925060800190505b60405180910390a15050565b600154604051632770a7eb60e21b81526001600160a01b0384811660048301526024820184905290911690639dc29fac90604401600060405180830381600087803b1580156101c457600080fd5b505af11580156101d8573d6000803e3d6000fd5b5050604080513381526001600160a01b03861660208201529081018490524260608201527f8cbfdd0f15f678ea4039ef0f30ce1494d591556082bee7c244bfd664efad36c79250608001905061016a565b6000806040838503121561023c57600080fd5b82356001600160a01b038116811461025357600080fd5b94602093909301359350505056fea26469706673582212204595f5ec223496bd15a6cb9cb98e0ffd7feeef1ce2d6592fce8c3329329f65a164736f6c63430008110033",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b506004361061004c5760003560e01c806340c10f19146100515780639dc29fac14610066578063f851a44014610079578063fc0c546a146100a8575b600080fd5b61006461005f366004610229565b6100bb565b005b610064610074366004610229565b610176565b60005461008c906001600160a01b031681565b6040516001600160a01b03909116815260200160405180910390f35b60015461008c906001600160a01b031681565b6001546040516340c10f1960e01b81526001600160a01b03848116600483015260248201849052909116906340c10f1990604401600060405180830381600087803b15801561010957600080fd5b505af115801561011d573d6000803e3d6000fd5b5050604080513381526001600160a01b03861660208201529081018490524260608201527f03f17d66ad3bf18e9412eb06582908831508cdb9b8da9cddb1431f645a5b8632925060800190505b60405180910390a15050565b600154604051632770a7eb60e21b81526001600160a01b0384811660048301526024820184905290911690639dc29fac90604401600060405180830381600087803b1580156101c457600080fd5b505af11580156101d8573d6000803e3d6000fd5b5050604080513381526001600160a01b03861660208201529081018490524260608201527f8cbfdd0f15f678ea4039ef0f30ce1494d591556082bee7c244bfd664efad36c79250608001905061016a565b6000806040838503121561023c57600080fd5b82356001600160a01b038116811461025357600080fd5b94602093909301359350505056fea26469706673582212204595f5ec223496bd15a6cb9cb98e0ffd7feeef1ce2d6592fce8c3329329f65a164736f6c63430008110033",
+  "linkReferences": {},
+  "deployedLinkReferences": {}
+}
